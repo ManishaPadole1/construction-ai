@@ -3,8 +3,8 @@
 // Fallback rules to be used if an authority is not explicitly defined in the active project type
 export const FALLBACK_RULES = {
   1: {
-    name: "Drawing Upload",
-    description: "Standard drawing submission",
+    name: "Upload Drawings",
+    description: "Standard drawing submission for Dubai Government",
     drawingInput: [
       {
         key: "default",
@@ -51,7 +51,7 @@ export const FALLBACK_RULES = {
     ],
   },
   2: {
-    name: "Detailed Analysis",
+    name: "Detailed Analysis for checking git working",
     description: "In-depth AI analysis of drawings",
     drawingInput: [
       {
