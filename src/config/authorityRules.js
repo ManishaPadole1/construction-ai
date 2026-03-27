@@ -75,7 +75,7 @@ export const FALLBACK_RULES = {
     ],
   },
   3: {
-    name: "Quick Check",
+    name: "Quick Check the files",
     description: "Fast validation of requirements",
     drawingInput: [], // Empty array = disabled
     requirementInput: [
