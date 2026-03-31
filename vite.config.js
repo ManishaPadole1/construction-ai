@@ -17,6 +17,9 @@ export default defineConfig({
     VitePWA({
       registerType: "autoUpdate",
       includeAssets: ["favicon.ico", "logo192.png", "logo512.png"],
+      workbox: {
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
+      },
       manifest: {
         name: "Aerotive UAE Smart Approval",
         short_name: "Aerotive",

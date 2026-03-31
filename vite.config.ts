@@ -1,14 +1,23 @@
-
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import tailwindcss from "@tailwindcss/vite";
 
-  export default defineConfig({
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+export default defineConfig({
     plugins: [
       react(),
+      tailwindcss(),
       VitePWA({
         registerType: 'autoUpdate',
         includeAssets: ['favicon.ico', 'logo192.png', 'logo512.png'],
+        workbox: {
+          maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
+        },
         manifest: {
           name: 'Aerotive UAE Smart Approval',
           short_name: 'Aerotive',
